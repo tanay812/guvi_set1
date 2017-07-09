@@ -85,42 +85,59 @@ class oddeven
 }
 Q5.Largest among three
 -->import java.util.Scanner;
-
- class JavaProgram
+ 
+class Largestamongthree
 {
-    public static void main(String args[])
-    {
-        char ch;
-        Scanner scan = new Scanner(System.in);
-		
-        System.out.print("Enter an Alphabet : ");
-        ch = scan.next().charAt(0);
-		
-        if( (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
-            System.out.println(ch + " is an alphabet.");
-        else
-            System.out.println(ch + " is not an alphabet.");
-    }
+   public static void main(String args[])
+   {
+      int x, y, z;
+      System.out.println("Enter three integers ");
+      Scanner s = new Scanner(System.in);
+ 
+      x = s.nextInt();
+      y = s.nextInt();
+      z = s.nextInt();
+ 
+      if ( x > y && x > z )
+         System.out.println(x+" is largest.");
+      else if ( y > x && y > z )
+         System.out.println(y+" is largest.");
+      else if ( z > x && z > y )
+         System.out.println(z+" is largest.");
+      else   
+         System.out.println("All the three nos. are same");
+   }
 }
 //Q6.LeapYearOrNot
--->import java.util.Scanner;
+-->import java.util.*;
 
- class JavaProgram
+public class JavaProgram
 {
     public static void main(String args[])
     {
-        char ch;
-        Scanner scan = new Scanner(System.in);
-		
-        System.out.print("Enter an Alphabet : ");
-        ch = scan.next().charAt(0);
-		
-        if( (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
-            System.out.println(ch + " is an alphabet.");
-        else
-            System.out.println(ch + " is not an alphabet.");
+       int year;
+       Scanner scan = new Scanner(System.in);
+	   
+       System.out.print("Enter Year : ");
+       year = scan.nextInt();
+	   
+       if((year%4 == 0) && (year%100!=0))
+       {
+           System.out.print("This is a Leap Year");
+       }
+       else if(year%100 == 0)
+       {
+           System.out.print("This is not a Leap Year");
+       }
+       else if(year%400 == 0)
+       {
+           System.out.print("This is a Leap Year");
+       }
+       else
+       {
+           System.out.print("This is not a Leap Year");
+       }
     }
-}
 //Q7.Hello 5 times
 -->public class Hello
  {
